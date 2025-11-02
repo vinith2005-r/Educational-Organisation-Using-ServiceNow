@@ -171,7 +171,9 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 }
 ```
 
+Output Screenshot:
 
+<img width="1440" height="898" alt="- Student - Google Chrome 02-11-2025 15_08_12" src="https://github.com/user-attachments/assets/c060688e-a4d4-42c1-a912-0a13d8144d34" />
 
 
 | Deliverable               | Description                                |
