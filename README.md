@@ -171,17 +171,7 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
 }
 ```
 
-📊 Output Snapshots
 
-📸 Attach screenshots here of:
-
-Admission Form
-
-Student Progress Form
-
-Calculated Percentage and Result
-
-Process Flow
 
 
 | Deliverable               | Description                                |
