@@ -138,7 +138,9 @@ var s6 = parseFloat(g_form.getValue('u_subject6')) || 0;
 var total = s1 + s2 + s3 + s4 + s5 + s6;
 g_form.setValue('u_total_marks', total);
 }
+```
 📊 2️⃣ Calculate Percentage
+```
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
    if (isLoading || newValue === '') return;
 
@@ -152,9 +154,11 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
    var percentage = (total / 600) * 100;
    g_form.setValue('u_percentage', percentage.toFixed(2));
 }
+```
 
 
 🏁 3️⃣ Result Script
+```
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
    if (isLoading || newValue === '') return;
 
@@ -164,9 +168,8 @@ function onChange(control, oldValue, newValue, isLoading, isTemplate) {
    } else {
       g_form.setValue('u_result', 'Fail');
    }
-} 
-
-
+}
+```
 
 📊 Output Snapshots
 
@@ -216,3 +219,5 @@ YouTube Tutorials for ServiceNow Form Design and Flow
 📦 Repository Link: https://github.com/vinith2005-r/Educational-Organisation-Using-ServiceNow.git
 
 🎥 Demo Video: https://drive.google.com/file/d/1cAoGujoIO6yr6K36Z_s55Ec6cK_JGgnb/view?usp=sharing
+
+
