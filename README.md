@@ -213,6 +213,6 @@ YouTube Tutorials for ServiceNow Form Design and Flow
 
 🌐 GitHub Details
 
-📦 Repository Link: (Add your GitHub Repo URL here)
+📦 Repository Link: https://github.com/vinith2005-r/Educational-Organisation-Using-ServiceNow.git
 
 🎥 Demo Video: https://drive.google.com/file/d/1cAoGujoIO6yr6K36Z_s55Ec6cK_JGgnb/view?usp=sharing
