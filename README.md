@@ -1,178 +1,218 @@
-🎓 Educational Organisation Using ServiceNow
+# 🎓 Educational Organisation Using ServiceNow  
 
-KSK College of Engineering and Technology
-Department of Computer Science and Engineering
+> 🏫 **K.S.K College of Engineering and Technology**  
+> 💻 **Department of Computer Science and Engineering**
 
-🧑‍💻 Team Details
-Role	Name
-Team ID	NM2025TMID05478
-Team Size	4
-Team Leader	Nithish C
-Team Member 1	Kumaresan G
-Team Member 2	Vasanth R
-Team Member 3	Vinith R
-🧩 Problem Statement
+---
 
-Educational institutions often struggle with managing large volumes of student and staff information through manual or disconnected systems.
-Tasks such as admissions, student record management, and progress tracking become time-consuming and prone to errors.
-The lack of a unified digital platform leads to inefficiency, communication gaps, and delays in decision-making.
+## 👥 Team Details  
 
-👉 This project addresses these challenges by developing an Educational Management System on ServiceNow to automate administrative workflows, centralize data, and improve institutional efficiency.
+| Role | Name |
+|------|------|
+| **Team ID** | NM2025TMID05478 |
+| **Team Size** | 4 |
+| **Team Leader** | Nithish C |
+| **Team Member 1** | Kumaresan G |
+| **Team Member 2** | Vasanth R |
+| **Team Member 3** | Vinith R |
 
-🎯 Objectives
+---
 
-Design and implement a centralized system for managing student and teacher information using ServiceNow.
+## 🧩 Problem Statement  
 
-Automate key processes such as admissions, attendance, and progress monitoring.
+Educational institutions often face challenges in managing large volumes of student and staff information.  
+Manual processes in **admissions**, **records management**, and **progress tracking** result in inefficiency, duplication, and human errors.  
 
-Enable real-time access and updates of academic and administrative data.
+> This project introduces a **ServiceNow-based Educational Management System** that automates and centralizes all institutional workflows to improve efficiency, transparency, and user experience.
 
-Improve coordination among departments and reduce manual workloads.
+---
 
-Generate reports and analytics for better decision-making.
+## 🎯 Project Objectives  
 
-Enhance transparency and user experience for students, faculty, and administrators.
+✅ Develop a centralized data system for students and staff.  
+✅ Automate workflows for admission and progress tracking.  
+✅ Enable real-time updates and quick data access.  
+✅ Generate reports and analytics for informed decision-making.  
+✅ Improve collaboration between administration and faculty.  
+✅ Minimize manual errors through automation.
 
-🛠️ Skills and Technologies Used
+---
 
-Platform: ServiceNow
+## 🛠️ Skills & Technologies Used  
 
-Skills:
+| Category | Details |
+|-----------|----------|
+| **Platform** | ServiceNow |
+| **Languages** | JavaScript (Client Scripts) |
+| **ServiceNow Components** | Forms, Tables, Workflows, Update Sets, Catalogs |
+| **Other Tools** | Process Flow Designer, Number Maintenance, Report Builder |
 
-ServiceNow Administration & Configuration
+---
 
-Form and Table Design
+## 🚀 Development Workflow  
 
-Workflow & Flow Designer
+### ⚙️ Step 1: ServiceNow Instance Setup  
+- Visit [ServiceNow Developer Portal](https://developer.servicenow.com).  
+- Request a **Personal Developer Instance**.  
+- Log in and configure your workspace.
 
-Reporting and Dashboard Creation
+---
 
-🚀 Project Development Steps
-🧱 Step 1: Setting up ServiceNow Instance
+### 🧱 Step 2: Create Local Update Set  
+**Path:** `All → Local Update Sets → New`  
+- Name: `Educational Organisation`  
+- Submit → Click **"Make Current"**
 
-Sign up at ServiceNow Developer Portal
-.
+---
 
-Request a Personal Developer Instance.
+### 🧩 Step 3: Table Creation  
 
-Log in using your instance credentials.
+#### 🔹 Salesforce Table  
+- Navigate: `System Definition → Tables → New`  
+- Label: `Salesforce`  
+- Check “Extensible” under *Controls*  
+- Create fields:  
+  - Admission Number (Display = True)  
+  - Grade  
+  - Student Name  
+  - Father Name  
+  - Mother Name  
+  - Contact Numbers  
+  - Address Fields  
 
-⚙️ Step 2: Creating an Update Set
+---
 
-All → Local Update Sets → New
+#### 🔹 Admission Table  
+- Extended from **Salesforce Table**  
+- Create fields:  
+  - Admission Date  
+  - Course Name  
+  - Department  
+  - Email ID  
+  - Status  
 
-Name: Educational Organisation
+---
 
-Submit and Make Current
+#### 🔹 Student Progress Table  
+- Create fields for:  
+  - Subject Marks (Subject1, Subject2, …)  
+  - Total Marks  
+  - Percentage  
+  - Result  
 
-🧩 Step 3: Creating Tables
-🔹 Salesforce Table
+---
 
-All → Tables → New
+### 🧰 Step 4: Form Design  
+- Go to **Form Layout** and **Form Designer** for all tables.  
+- Organize and group fields logically using drag-and-drop.
 
-Label: Salesforce → API name auto-generates
+---
 
-Enable Extensible under Controls
+### 🔢 Step 5: Number Maintenance  
+`System Definition → Number Maintenance → New`  
+- Table: `Salesforce`  
+- Prefix: `SALES`  
+- Digits: `4`
 
-Create columns (Admin Number, Grade, etc.)
+---
 
-For Admin Number: enable Display = True, and set Dynamic Default = Get Next Padded Number
+### 🔄 Step 6: Process Flow Configuration  
+`Process Flow → New`  
+- Define stages:  New → InProgress → Joined → Rejected → Rejoined → Closed → Cancelled
 
-🔹 Admission Table
+- 
+---
 
-Extend Table → Salesforce
+## 🧠 Core Client Scripts  
 
-Add Module → Salesforce
+### 🧮 1️⃣ Calculate Total Marks  
 
-Create columns (Admission No, Student Name, Course Name, Department, Admission Date, Contact No, Email, Grade, Status, etc.)
-
-🔹 Student Progress Table
-
-Add Module → Salesforce
-
-Create fields for subjects, total marks, percentage, and result.
-
-🧰 Step 4: Form Layout & Design
-
-Configure Form Layout and Form Design for all tables (Salesforce, Admission, Student Progress).
-
-Arrange fields properly using drag & drop.
-
-🔢 Step 5: Number Maintenance
-
-All → Number Maintenance → New
-
-Configure prefix and digits for Admin Number generation.
-
-🔄 Step 6: Process Flow
-
-All → Process Flow → New
-
-Define stages in order:
-New → InProgress → Joined → Rejected → Rejoined → Closed → Cancelled
-
-💻 Step 7: Client Scripts
-1️⃣ Auto-Populate Script (Admission Table)
-
-Fetch related student details automatically when Admission Number changes.
-
-2️⃣ Pincode Update Script
-
-Auto-fill Mandal, City, and District based on Pincode.
-
-3️⃣ Disable Fields Script (Student Progress)
-
-Lock calculated fields like Total, Percentage, Result.
-
-4️⃣ Total Update Script
-
-Calculate total marks from individual subjects.
-
-5️⃣ Result Script
-
-Display “Pass” or “Fail” based on percentage range.
-
-6️⃣ Percentage Script
-
-Calculate percentage dynamically from total marks.
-
-🧮 Example Script (Percentage Calculation)
+```
+function calculateTotal() {
+var s1 = parseFloat(g_form.getValue('u_subject1')) || 0;
+var s2 = parseFloat(g_form.getValue('u_subject2')) || 0;
+var s3 = parseFloat(g_form.getValue('u_subject3')) || 0;
+var s4 = parseFloat(g_form.getValue('u_subject4')) || 0;
+var s5 = parseFloat(g_form.getValue('u_subject5')) || 0;
+var s6 = parseFloat(g_form.getValue('u_subject6')) || 0;
+var total = s1 + s2 + s3 + s4 + s5 + s6;
+g_form.setValue('u_total_marks', total);
+}
+📊 2️⃣ Calculate Percentage
 function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-   if (isLoading || newValue === '') {
-      return;
-   }
+   if (isLoading || newValue === '') return;
 
    var total = parseFloat(g_form.getValue('u_total_marks'));
    if (isNaN(total) || total < 0 || total > 600) {
-       alert('Please enter a valid total mark between 0 and 600.');
+       g_form.showFieldMsg('u_total_marks', 'Total should be between 0 and 600', 'error');
        g_form.setValue('u_percentage', '');
        return;
    }
 
    var percentage = (total / 600) * 100;
-   if (percentage > 100) {
-       percentage = 100;
-   }
    g_form.setValue('u_percentage', percentage.toFixed(2));
 }
 
-📊 Result
 
-The ServiceNow-based Educational Management System demonstrates:
+🏁 3️⃣ Result Script
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') return;
+
+   var percentage = parseFloat(g_form.getValue('u_percentage'));
+   if (percentage >= 40) {
+      g_form.setValue('u_result', 'Pass');
+   } else {
+      g_form.setValue('u_result', 'Fail');
+   }
+} 
+
+
+
+📊 Output Snapshots
+
+📸 Attach screenshots here of:
+
+Admission Form
+
+Student Progress Form
+
+Calculated Percentage and Result
+
+Process Flow
+
+
+| Deliverable               | Description                                |
+| ------------------------- | ------------------------------------------ |
+| **Source Code**           | All client scripts and form configurations |
+| **Documentation**         | Project report with screenshots            |
+| **GitHub Repository**     | Upload all code and screenshots            |
+| **Demo Video (Optional)** | Project working demo video                 |
+
+
+🏆 Results
+
 ✅ Automated student admission and academic tracking
-✅ Centralized, error-free data storage
-✅ Simplified workflows
-✅ Real-time reporting and analytics
+✅ Real-time calculation of marks and percentage
+✅ Centralized database with error-free data management
+✅ Streamlined institutional workflow
 
-🧾 Conclusion
+🧠 Conclusion
 
-The Educational Organisation Using ServiceNow project effectively modernizes the way educational institutions handle academic and administrative processes.
-By leveraging ServiceNow’s workflow automation, forms, and reporting tools, this system improves efficiency, transparency, and accuracy — enabling smarter decision-making and seamless operations.
+The Educational Organisation Using ServiceNow project showcases how ServiceNow’s automation capabilities can transform academic administration.
+It brings together students, staff, and administrators under a single unified system that ensures efficiency, transparency, and reliability.
 
-This project proves how cloud platforms like ServiceNow can revolutionize educational management, creating a more connected and intelligent academic environment.
+This digital transformation promotes smarter operations and data-driven decision-making in modern educational institutions.
 
-🧠 Repository Information
+📚 References
 
-GitHub: (Add your repo link here)
-Project Report & Screenshots: /docs/ folder
-Demo Video (Optional): Upload link or .mp4 in repo root
+ServiceNow Documentation
+
+ServiceNow Developer Site
+
+YouTube Tutorials for ServiceNow Form Design and Flow
+
+🌐 GitHub Details
+
+📦 Repository Link: (Add your GitHub Repo URL here)
+📄 Report Folder: /docs/
+🎥 Demo Video: (Optional link)
