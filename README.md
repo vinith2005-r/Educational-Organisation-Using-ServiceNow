@@ -214,5 +214,5 @@ YouTube Tutorials for ServiceNow Form Design and Flow
 🌐 GitHub Details
 
 📦 Repository Link: (Add your GitHub Repo URL here)
-📄 Report Folder: /docs/
-🎥 Demo Video: (Optional link)
+
+🎥 Demo Video: https://drive.google.com/file/d/1cAoGujoIO6yr6K36Z_s55Ec6cK_JGgnb/view?usp=sharing
